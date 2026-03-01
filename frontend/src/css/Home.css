@@ -1,0 +1,67 @@
+.job-category, .featured-job, .latest-job{
+    padding: 40px;
+}
+
+.category-header, .featured-header, .latest-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-header h2, .featured-header h2, .latest-header h2{
+    font-family: "Clash Display", sans-serif;
+    font-size: 42px;
+    color: #25324B;
+    font-weight: 600;
+}
+
+.category-header h2 span, .featured-header h2 span, .latest-header h2 span{
+    color: #26A4FF;
+}
+
+.show-jobs{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Epilogue", sans-serif;
+    font-size: 16px;
+    color: #4640DE;
+    font-weight: 600;
+}
+
+.cta-section{
+    background-color: #4640DE;
+    clip-path: polygon( 0% 15.338%,0% 100%,83.868% 100%,100% 77.174%,100% 0%,10.797% 0%,0% 15.338% );
+    overflow: hidden;
+    height: 450px;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.cta-section h2{
+    font-family: "Clash Display", sans-serif;
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: 600;
+    max-width: 400px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.cta-section p{
+    font-family: "Epilogue", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+.cta-button{
+    font-family: "Epilogue", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4640DE;
+    background-color: #FFFFFF;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}

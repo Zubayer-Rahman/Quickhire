@@ -1,0 +1,207 @@
+/* ── Navbar Container ── */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  height: 70px;
+  background-color: #f8f8fd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* ── Logo ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #25324b;
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+}
+
+/* ── Nav Links ── */
+.jobs-class {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: 40px;
+  flex: 1;
+}
+
+.nav-link {
+  font-family: "Epilogue", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #515b6f;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #25324b;
+  font-weight: 600;
+}
+
+/* ── Auth Buttons ── */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-login {
+  font-family: "Epilogue", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #4845d2;
+  text-decoration: none;
+  padding: 0 28px;
+  transition: color 0.15s ease;
+  white-space: nowrap;
+}
+
+.navbar-login:hover {
+  color: #3533b8;
+}
+
+.navbar-divider {
+  width: 1px;
+  height: 38px;
+  background: #d6ddeb;
+  flex-shrink: 0;
+}
+
+.navbar-signup {
+  font-family: "Epilogue", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  background: #4845d2;
+  padding: 12px 24px;
+  margin-left: 0;
+  white-space: nowrap;
+  transition:
+    background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.navbar-signup:hover {
+  background: #3533b8;
+  box-shadow: 0 4px 18px rgba(72, 69, 210, 0.35);
+}
+
+/* ── Mobile Hamburger ── */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.navbar-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #25324b;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* ── Mobile Menu ── */
+.navbar-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #f8f8fd;
+  border-top: 1px solid #e8e8e8;
+  padding: 16px 24px 24px;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 999;
+  animation: slideDown 0.18s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-mobile-menu.open {
+  display: flex;
+}
+
+.navbar-mobile-menu a {
+  font-family: "Epilogue", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #515b6f;
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8e8e8;
+  transition: color 0.15s;
+}
+
+.navbar-mobile-menu a:hover {
+  color: #25324b;
+}
+
+.navbar-mobile-menu .mobile-login {
+  color: #4845d2;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+.navbar-mobile-menu .mobile-signup {
+  margin-top: 8px;
+  background: #4845d2;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 13px;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .jobs-class,
+  .navbar-actions {
+    display: none;
+  }
+  .navbar-hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,50 @@
+.banner-container {
+    background-color: #F6F6FB;
+    clip-path: polygon( 0% 0%,0% 100%,83.868% 100%,100% 77.174%,100% 0%,10.797% 0%,0% 0% );
+    padding: 20px;
+    position: relative;
+}
+.left-content {
+    position: relative;
+    z-index: 1;
+    margin-left: 80px;
+}
+.left-content h1{
+    font-size: 72px;
+    font-weight: 600;
+    color: #25324B;
+    max-width: 450px;
+}
+.left-content h1 span{
+    display: block;
+    color: #26A4FF;
+}
+.description{
+    font-size: 18px;
+    color: #515B6F;
+    font-family: "Epilogue", sans-serif;
+    margin-top: 25px;
+    max-width: 500px;
+}
+
+.contentline{
+    font-size: 16px;
+    font-family: "Epilogue", sans-serif;
+    color: #202430;
+}
+.pattern, .banner-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    margin-right: 80px;
+}
+.banner-img{
+    width: 350px;
+    height: auto;
+    margin-right: 140px;
+}
+.pattern{
+    width: 700px;
+    height: auto;
+}

@@ -1,0 +1,48 @@
+/* ── Header ── */
+.listings-header {
+  margin-bottom: 2rem;
+}
+
+.listings-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.listings-subtitle {
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+/* ── Results Section ── */
+.listings-results {
+  margin-top: 1.5rem;
+}
+
+.listings-empty {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #9ca3af;
+}
+
+.listings-count {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* ── Job Grid ── */
+.listings-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
