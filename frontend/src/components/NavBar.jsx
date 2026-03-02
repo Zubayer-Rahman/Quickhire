@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import Mainlogo from '../assets/Frame 3.png';
 import './NavBar.css';
-import jobs from '../pages/JobsListing';
+// import jobs from '../pages/JobsListing';
 
 const Navbar = () => {
     const { pathname } = useLocation();
@@ -9,14 +9,15 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             {/* Logo */}
-            <div className="logo">
+            <Link to="/" className="logo">
                 <img src={Mainlogo} alt="Logo" />
                 <h2 className="company-name">QuickHire</h2>
-            </div>
+            </Link>
+
 
             {/* Nav Links */}
             <div className="jobs-class">
-                <Link to="/jobs" element={jobs} className={`nav-link ${pathname === '/jobs' ? 'active' : ''}`}>
+                <Link to="/jobs" className={`nav-link ${pathname === '/jobs' ? 'active' : ''}`}>
                     Find Jobs
                 </Link>
                 <Link to="/companies" className={`nav-link ${pathname === '/companies' ? 'active' : ''}`}>

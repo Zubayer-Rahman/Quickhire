@@ -1,3 +1,8 @@
+/* conatiner */
+.joblist-container{
+  padding: 3rem;
+}
+
 /* ── Header ── */
 .listings-header {
   margin-bottom: 2rem;

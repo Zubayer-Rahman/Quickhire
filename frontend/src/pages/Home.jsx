@@ -4,8 +4,8 @@ import Carasoule from '../components/Carasoule'
 import { Link } from 'react-router-dom'
 import '../css/Home.css'
 import dashboardImage from '../assets/dashboard.png'
-import Category from '../components/Category'
-import jobs from './JobsListing.jsx'
+// import Category from '../components/Category'
+import Jobs from './JobsListing'
 
 
 const home = () => {
@@ -18,7 +18,7 @@ const home = () => {
         <div className='category-header'>
           <h2>Explore by <span>category</span></h2>
           <div className='show-jobs'>
-            <Link to="/jobs" element={jobs} className='see-all'>Show all Jobs</Link>
+            <Link to="/jobs" element={Jobs} className='see-all'>Show all Jobs</Link>
             <svg
               width="24"
               height="24"
@@ -36,8 +36,6 @@ const home = () => {
         </div>
 
         <div className='category-items'>
-          <Category />
-
         </div>
       </div>
 

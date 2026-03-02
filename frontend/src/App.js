@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
+import Home from './pages/Home.jsx';
 import Navbar from './components/NavBar.jsx';
 import AdminPage from './pages/AdminPage.jsx';
+import JobListingsPage from './pages/JobsListing.jsx';
+import JobDetailsPage from './pages/JobsDetails.jsx';
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<AdminPage />} />
-          {/*<Route path="/jobs/:id" element={<JobDetail />} />
-          <Route path="/companies" element={<Companies />} />*/}
+          <Route path="/jobs" element={<JobListingsPage />} />
+          <Route path="/jobs/:id" element={<JobDetailsPage />} />
         </Routes>
       </div>
     </Router>

@@ -1,37 +1,39 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import './JobCard.css';
+import JobDetailPage from '../pages/JobsDetails.jsx';
 
-const categoryColors = {
-    Engineering: 'bg-blue-100 text-blue-700',
-    Design: 'bg-pink-100 text-pink-700',
-    Management: 'bg-yellow-100 text-yellow-700',
-    Marketing: 'bg-green-100 text-green-700',
-    Default: 'bg-gray-100 text-gray-700',
+
+const badgeModifiers = {
+    Engineering: 'job-card__badge--engineering',
+    Design: 'job-card__badge--design',
+    Management: 'job-card__badge--management',
+    Marketing: 'job-card__badge--marketing',
+    Default: 'job-card__badge--default',
 };
 
 const JobCard = ({ job }) => {
-    const colorClass = categoryColors[job.category] || categoryColors.Default;
+    const badgeClass = badgeModifiers[job.category] || badgeModifiers.Default;
 
     return (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-            <div className="flex items-start justify-between">
+        <div className="job-card">
+            <div className="job-card__header">
                 <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{job.title}</h3>
-                    <p className="text-gray-500 text-sm mt-1">{job.company}</p>
+                    <h3 className="job-card__title">{job.title}</h3>
+                    <p className="job-card__company">{job.company}</p>
                 </div>
-                <span className={`text-xs font-medium px-3 py-1 rounded-full ${colorClass}`}>
+                <span className={`job-card__badge ${badgeClass}`}>
                     {job.category}
                 </span>
             </div>
-            <div className="flex items-center gap-4 mt-4 text-sm text-gray-500">
+
+            <div className="job-card__meta">
                 <span>📍 {job.location}</span>
                 <span>🗓 {new Date(job.created_at).toLocaleDateString()}</span>
             </div>
-            <p className="mt-3 text-gray-600 text-sm line-clamp-2">{job.description}</p>
-            <Link
-                to={`/jobs/${job.id}`}
-                className="mt-4 inline-block text-sm font-medium text-primary hover:text-primary-dark transition-colors"
-            >
+
+            <p className="job-card__description">{job.description}</p>
+
+            <Link to={`/jobs/${job.id}`} element={JobDetailPage} className="job-card__link">
                 View Details →
             </Link>
         </div>

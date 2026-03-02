@@ -30,7 +30,7 @@ const JobListingsPage = () => {
   }, [loadJobs]);
 
   return (
-    <div>
+    <div className='joblist-container'>
       <div className="listings-header">
         <h1 className="listings-title">Find Your Next Job</h1>
         <p className="listings-subtitle">
