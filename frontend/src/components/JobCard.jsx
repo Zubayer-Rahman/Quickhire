@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import './JobCard.css';
-import JobDetailPage from '../pages/JobsDetails.jsx';
 
 
 const badgeModifiers = {
@@ -33,7 +32,7 @@ const JobCard = ({ job }) => {
 
             <p className="job-card__description">{job.description}</p>
 
-            <Link to={`/jobs/${job.id}`} element={JobDetailPage} className="job-card__link">
+            <Link to={`/jobs/${job.id}`} className="job-card__link">
                 View Details →
             </Link>
         </div>
