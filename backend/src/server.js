@@ -10,6 +10,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  
   methods: ['GET', 'POST', 'DELETE'],
 }));
 app.use(express.json());
